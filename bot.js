@@ -17,11 +17,3 @@ client.login(process.env.BOT_TOKEN);
 let childProcess = require('child_process').spawn(
       'java', ['-jar', 'iSystemsBot.jar']
     );
-
-childProcess.stdout.on('data', function(data) {
-    console.log(data);
-});
-
-childProcess.stderr.on("data", function (data) {
-    console.log(data);
-});
