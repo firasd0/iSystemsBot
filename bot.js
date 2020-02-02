@@ -11,6 +11,9 @@ client.on('message', message => {
   	}
 });
 
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
+
 let childProcess = require('child_process').spawn(
       'java', ['-jar', 'iSystemsBot.jar']
     );
@@ -22,6 +25,3 @@ childProcess.stdout.on('data', function(data) {
 childProcess.stderr.on("data", function (data) {
     console.log(data);
 });
-
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
